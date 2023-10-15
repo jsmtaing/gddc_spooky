@@ -19,6 +19,7 @@ func _process(delta):
 	if (jumping && on_ground):
 		velocity.y = jump_force
 		local_hold_time = jump_hold_time
+		$SoundJump.play()
 	elif (local_hold_time > 0):
 		if (jumping):
 			velocity.y = jump_force

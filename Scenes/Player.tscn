@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://b5n757weiy0jr"]
+[gd_scene load_steps=29 format=3 uid="uid://b5n757weiy0jr"]
 
 [ext_resource type="Texture2D" uid="uid://oigyq80p6bxg" path="res://Assets/Sprites/roboMJ_Spritesheet.png" id="1_aj13a"]
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_n0nb1"]
+[ext_resource type="AudioStream" uid="uid://bs8wilpr2bpuy" path="res://Assets/Sounds/jump.ogg" id="3_xejop"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m4qwl"]
 atlas = ExtResource("1_aj13a")
@@ -201,3 +202,6 @@ script = ExtResource("1_n0nb1")
 sprite_frames = SubResource("SpriteFrames_qlaym")
 animation = &"Fall"
 autoplay = "Idle"
+
+[node name="SoundJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xejop")
