@@ -31,10 +31,12 @@ func _process(delta):
 	elif (direction < 0):
 		animated_sprite.flip_h = true
 	
-	if (jumping):
-		animated_sprite.play("Jump")
+	if (velocity.y < 0):
+		animated_sprite.play("Jump")  # Play "Jump" when ascending
 	elif (!on_ground):
 		animated_sprite.play("Fall")
+	elif (jumping):
+		animated_sprite.play("Jump")
 	elif (direction != 0):
 		animated_sprite.play("Run")
 	else:
